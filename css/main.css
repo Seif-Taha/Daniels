@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80%;
+}
+body{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --main-color:black;
+    --secoundary-color:#F6F6F6;
+    --white-color:white;
+}
+.maintitle{
+    position: relative;
+    z-index: 3333;
+}
+.maintitle::before{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    bottom: 50%;
+    left: 50%;
+    z-index: -1;
+    height: 50%;
+    width: 20%;
+    transform: translate(-50%);
+}
+/* start Nav */
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+}
+.navbar .navbar-nav .nav-link{
+    position: relative;
+    overflow: hidden;
+}
+.navbar .navbar-nav .nav-link::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 3px;
+    transform: translateX(-105%);
+    transition: .5s;
+}
+.navbar .navbar-nav .nav-link:hover::before,
+.navbar .navbar-nav .nav-link.active::before{
+    transform: translateX(0);
+}
+/* End Nav */
+/* start Home */
+.home{
+    position: relative;
+    height: calc(100vh - 30px);
+    background-image: url(../imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.home::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, .55) ;
+}
+.home .text h1{
+    font-size: 50px;
+}
+.home .text a{
+    color: var(--white-color);
+}
+.home h1::after{
+    content: "";
+    font-weight: 600;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    animation: textslider steps(34) 5s infinite;
+}
+@keyframes textslider {
+    3%{
+        content: "|";
+    }
+    6%{
+        content: "D|";
+    }
+    9%{
+        content: "DE|";
+    }
+    12%{
+        content: "DES|";
+    }
+    15%{
+        content: "DESI|";
+    }
+    18%{
+        content: "DESIG|";
+    }
+    21%{
+        content: "DESIG|";
+    }
+    24%{
+        content: "DESIGN|";
+    }
+    27%{
+        content: "DESIGNE|";
+    }
+    30%{
+        content: "DESIGNER|";
+    }
+    33%{
+        content: "DESIGNE|";
+    }
+    36%{
+        content: "DESIGN|";
+    }
+    39%{
+        content: "DESIG|";
+    }
+    42%{
+        content: "DESI|";
+    }
+    45%{
+        content: "DES|";
+    }
+    48%{
+        content: "DE|";
+    }
+    51%{
+        content: "DE|";
+    }
+    54%{
+        content: "DEV|";
+    }
+    57%{
+        content: "DEVO|";
+    }
+    60%{
+        content: "DEVOL|";
+    }
+    63%{
+        content: "DEVOLO|";
+    }
+    66%{
+        content: "DEVOLOP|";
+    }
+    69%{
+        content: "DEVOLOPE|";
+    }
+    72%{
+        content: "DEVOLOPER|";
+    }
+    75%{
+        content: "DEVOLOPE|";
+    }
+    78%{
+        content: "DEVOLOP|";
+    }
+    81%{
+        content: "DEVOLO|";
+    }
+    84%{
+        content: "DEVOL|";
+    }
+    87%{
+        content: "DEVO|";
+    }
+    90%{
+        content: "DEV|";
+    }
+    93%{
+        content: "DE|";
+    }
+    96%{
+        content: "D|";
+    }
+    98%{
+        content: "|";
+    }
+    100%{
+        content: "";
+    }
+}
+/* End Home */
+/* start About */
+.about .img {
+    position: relative;
+    z-index: 234;
+}
+.about .img::before{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    bottom: 0;
+    z-index: -1;
+    left: 20px;
+    height: 60%;
+    width: 10%;
+}
+.about .img::after{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    bottom: -35px;
+    left: 19px;
+    z-index: -1;
+    height: 20%;
+    width: 60%;
+}
+.about .percentage{
+    margin-bottom: 10px;
+    height: 22px;
+    background-color: var(--secoundary-color);
+    box-shadow: 5px 10px 20px 5px lightgrey inset !important;
+}
+.about .percentage span{
+    font-size: 14px;
+    padding-left: 10px;
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    height: 100%;
+}
+.about .btn1{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    transition: .5s;
+}
+.about .btn1:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.about .btn2{
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: .5s;
+}
+.about .btn2:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+/* End About */
+/* start services */
+.services .box{
+    box-shadow: 10px 10px 5px 5px var(--secoundary-color);
+}
+.services .box .icon{   
+    background-color: var(--secoundary-color);
+    border-radius: 50%;
+    transition: 1s;
+}
+.services .box .icon i{
+    width:100px;
+    color: var(--main-color);
+    transition: 1s;
+}
+.services .box:hover .icon{
+    background-color: var(--main-color);
+    border:8px solid  var(--lowopacity) ;
+}
+.services .box:hover .icon i{
+    color: white;
+}
+/* End services */
+/* start portoflio */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+}
+.portfolio .layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .8);
+    transition: .5s;
+}
+.portfolio .box:hover .layer{
+    opacity: 1;
+}
+.portfolio .box h6{
+    transition: .5s;
+}
+.portfolio .box:hover h6{
+    padding: 10px !important;
+}
+.portfolio .box .layer a i{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    transition: .5s;
+}
+.portfolio .box .layer a i:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+/* End portoflio */
+/* start testimonials */
+.testimonials{
+    min-height:50vh ;
+}
+.testimonials .carousel-item{
+    min-height: 300px;
+}
+.testimonials .carousel-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+/* End testimonials */
+/* start ourteam */
+.ourteam img{
+    position: relative;
+}
+.ourteam .info .layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transform: rotateY(180deg);
+    background-color: rgba(255, 255, 255, .8);
+    transition: 1s;
+}
+.ourteam .info .layer ul li a i{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    transition: .5s;
+}
+.ourteam .info .layer ul li a i:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.ourteam .info img{
+    transition: 1s;
+}
+.ourteam .cardd:hover .layer,
+.ourteam .info:hover .layer{
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+.ourteam .info:hover img{
+    transform: scale(1.2);
+}
+/* End ourteam */
+/* start contact */
+.contact .box .icon{   
+    background-color: var(--secoundary-color);
+    border-radius: 50%;
+    transition: 1s;
+}
+.contact .box .icon i{
+    width:100px;
+    color: var(--main-color);
+    transition: 1s;
+}
+.contact .box:hover .icon{
+    background-color: var(--main-color);
+    border:8px solid  var(--lowopacity) ;
+}
+.contact .box:hover .icon i{
+    color: white;
+}
+.contact form input,
+.contact form textarea{
+    background-color: #F6F6F6;
+    border: none;
+    outline: none;
+}
+.contact form input[type="text"],
+.contact form input[type="email"]{
+    width:49%;
+}
+.contact form textarea{
+    height: 200px;
+    max-height: 200px;
+}
+/* End contact */
